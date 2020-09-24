@@ -1,4 +1,4 @@
-package pl.vetpet.pojo;
+package pl.vetpet.model;
 
 import java.util.Date;
 
