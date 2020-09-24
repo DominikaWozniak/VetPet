@@ -1,10 +1,10 @@
-package pl.vetpet.pojo;
+package pl.vetpet.model;
 
-public class Admin {
+public class Accountant {
 
     private Long id;
-    private WorkerPersonalData workerPersonalData;
     private UserDetails userDetails;
+    private WorkerPersonalData workerPersonalData;
 
 
     public Long getId() {
@@ -15,6 +15,14 @@ public class Admin {
         this.id = id;
     }
 
+    public UserDetails getUserDetails() {
+        return userDetails;
+    }
+
+    public void setUserDetails(UserDetails userDetails) {
+        this.userDetails = userDetails;
+    }
+
     public WorkerPersonalData getWorkerPersonalData() {
         return workerPersonalData;
     }
@@ -23,11 +31,5 @@ public class Admin {
         this.workerPersonalData = workerPersonalData;
     }
 
-    public UserDetails getUserDetails() {
-        return userDetails;
-    }
 
-    public void setUserDetails(UserDetails userDetails) {
-        this.userDetails = userDetails;
-    }
 }
