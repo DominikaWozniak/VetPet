@@ -1,16 +1,15 @@
 package pl.vetpet.pojo;
 
 import java.util.Date;
-import java.util.List;
 
 public class Bill {
 
     private Long id;
     private Visit visit;
     private Date dateOfIssue;
-    private OwnerNaturalPerson ownerNaturalPerson;
+    private String treatmentName;
     private Float totalGross;
-    private List<PetTreatmentPrice> petTreatmentPrices;
+    private Owner owner;
 
     public Long getId() {
 
@@ -37,14 +36,6 @@ public class Bill {
         this.dateOfIssue = dateOfIssue;
     }
 
-    public OwnerNaturalPerson getOwnerNaturalPerson() {
-        return ownerNaturalPerson;
-    }
-
-    public void setOwnerNaturalPerson(OwnerNaturalPerson ownerNaturalPerson) {
-        this.ownerNaturalPerson = ownerNaturalPerson;
-    }
-
     public Float getTotalGross() {
         return totalGross;
     }
@@ -53,11 +44,19 @@ public class Bill {
         this.totalGross = totalGross;
     }
 
-    public List<PetTreatmentPrice> getPetTreatmentPrices() {
-        return petTreatmentPrices;
+    public String getTreatmentName() {
+        return treatmentName;
     }
 
-    public void setPetTreatmentPrices(List<PetTreatmentPrice> petTreatmentPrices) {
-        this.petTreatmentPrices = petTreatmentPrices;
+    public void setTreatmentName(String treatmentName) {
+        this.treatmentName = treatmentName;
+    }
+
+    public Owner getOwner() {
+        return owner;
+    }
+
+    public void setOwner(Owner owner) {
+        this.owner = owner;
     }
 }

@@ -1,16 +1,11 @@
 package pl.vetpet.pojo;
 
-import pl.vetpet.enums.Specialty;
-
-import java.util.List;
-
 public class Vet{
 
     private Long id;
     private WorkerPersonalData workerPersonalData;
     private UserDetails userDetails;
-    private List<Specialty> specialty;
-    private List<Visit> visits;
+    private String specialty;
 
     public Long getId() {
         return id;
@@ -36,19 +31,11 @@ public class Vet{
         this.userDetails = userDetails;
     }
 
-    public List<Specialty> getSpecialty() {
+    public String getSpecialty() {
         return specialty;
     }
 
-    public void setSpecialty(List<Specialty> specialty) {
+    public void setSpecialty(String specialty) {
         this.specialty = specialty;
-    }
-
-    public List<Visit> getVisits() {
-        return visits;
-    }
-
-    public void setVisits(List<Visit> visits) {
-        this.visits = visits;
     }
 }
