@@ -1,4 +1,4 @@
 package pl.vetpet.enums;
 
-public enum Specialty {
+public enum VetSpecialty {
 }

@@ -1,17 +1,11 @@
 package pl.vetpet.pojo;
 
-import pl.vetpet.enums.Permission;
-
-import java.util.List;
-
 public class UserDetails {
 
     private Long id;
     private String login;
     private String password;
-    private List<Permission> permission;
-    private List<WorkHours> workHours;
-    private List<Bill> bills;
+    private String permission;
 
     public Long getId() {
         return id;
@@ -37,27 +31,12 @@ public class UserDetails {
         this.password = password;
     }
 
-    public List<Permission> getPermission() {
+    public String getPermission() {
         return permission;
     }
 
-    public void setPermission(List<Permission> permission) {
+    public void setPermission(String permission) {
         this.permission = permission;
     }
 
-    public List<WorkHours> getWorkHours() {
-        return workHours;
-    }
-
-    public void setWorkHours(List<WorkHours> workHours) {
-        this.workHours = workHours;
-    }
-
-    public List<Bill> getBills() {
-        return bills;
-    }
-
-    public void setBills(List<Bill> bills) {
-        this.bills = bills;
-    }
 }

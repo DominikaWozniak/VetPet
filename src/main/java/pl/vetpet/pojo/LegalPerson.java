@@ -7,10 +7,9 @@ public class LegalPerson {
     private Long id;
     private String name;
     private String taxNumber;
+    private String phoneNumber;
     private Address address;
-    private List<Invoice> invoices;
     private List<Pet> pets;
-    private boolean isLegalPerson;
 
     public Long getId() {
         return id;
@@ -44,14 +43,6 @@ public class LegalPerson {
         this.address = address;
     }
 
-    public List<Invoice> getInvoices() {
-        return invoices;
-    }
-
-    public void setInvoices(List<Invoice> invoices) {
-        this.invoices = invoices;
-    }
-
     public List<Pet> getPets() {
         return pets;
     }
@@ -60,11 +51,11 @@ public class LegalPerson {
         this.pets = pets;
     }
 
-    public boolean isLegalPerson() {
-        return isLegalPerson;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setLegalPerson(boolean legalPerson) {
-        isLegalPerson = legalPerson;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 }

@@ -1,11 +1,12 @@
 package pl.vetpet.pojo;
 
-public class WorkHours {
+public class WorkRegister {
 
     private Long id;
     private Float hours;
     private String month;
     private Float salary;
+    private WorkerPersonalData workerPersonalData;
 
     public Long getId() {
         return id;
@@ -37,5 +38,13 @@ public class WorkHours {
 
     public void setSalary(Float salary) {
         this.salary = salary;
+    }
+
+    public WorkerPersonalData getWorkerPersonalData() {
+        return workerPersonalData;
+    }
+
+    public void setWorkerPersonalData(WorkerPersonalData workerPersonalData) {
+        this.workerPersonalData = workerPersonalData;
     }
 }

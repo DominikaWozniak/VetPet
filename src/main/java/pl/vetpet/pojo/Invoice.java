@@ -1,7 +1,6 @@
 package pl.vetpet.pojo;
 
 import java.util.Date;
-import java.util.List;
 
 public class Invoice {
 
@@ -11,7 +10,7 @@ public class Invoice {
     private Date dateOfIssue;
     private Date paymentDeadline;
     private Accountant accountant;
-    private List<PetTreatmentPrice> petTreatmentPrices;
+    private String treatmentName;
     private Float totalGross;
     private boolean isCash;
     private boolean isMoneyTransfer;
@@ -88,11 +87,11 @@ public class Invoice {
         isMoneyTransfer = moneyTransfer;
     }
 
-    public List<PetTreatmentPrice> getPetTreatmentPrices() {
-        return petTreatmentPrices;
+    public String getTreatmentName() {
+        return treatmentName;
     }
 
-    public void setPetTreatmentPrices(List<PetTreatmentPrice> petTreatmentPrices) {
-        this.petTreatmentPrices = petTreatmentPrices;
+    public void setTreatmentName(String treatmentName) {
+        this.treatmentName = treatmentName;
     }
 }

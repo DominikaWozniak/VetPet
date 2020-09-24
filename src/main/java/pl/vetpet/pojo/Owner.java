@@ -2,16 +2,16 @@ package pl.vetpet.pojo;
 
 import java.util.List;
 
-public class OwnerNaturalPerson {
+public class Owner {
 
     private Long id;
     private String name;
     private String surname;
-    private String address;
+    private Address address;
     private String phoneNumber;
     private List<Pet> pets;
-    private List<Bill> bills;
     private boolean isLegalPerson;
+    private LegalPerson legalPerson;
 
     public Long getId() {
         return id;
@@ -37,11 +37,11 @@ public class OwnerNaturalPerson {
         this.surname = surname;
     }
 
-    public String getAddress() {
+    public Address getAddress() {
         return address;
     }
 
-    public void setAddress(String address) {
+    public void setAddress(Address address) {
         this.address = address;
     }
 
@@ -61,19 +61,19 @@ public class OwnerNaturalPerson {
         this.pets = pets;
     }
 
-    public List<Bill> getBills() {
-        return bills;
-    }
-
-    public void setBills(List<Bill> bills) {
-        this.bills = bills;
-    }
-
     public boolean isLegalPerson() {
         return isLegalPerson;
     }
 
     public void setLegalPerson(boolean legalPerson) {
         isLegalPerson = legalPerson;
+    }
+
+    public LegalPerson getLegalPerson() {
+        return legalPerson;
+    }
+
+    public void setLegalPerson(LegalPerson legalPerson) {
+        this.legalPerson = legalPerson;
     }
 }
