@@ -2,7 +2,7 @@ package pl.vetpet.pojo;
 
 import java.util.List;
 
-public class Owner {
+public class OwnerNaturalPerson {
 
     private Long id;
     private String name;
@@ -10,6 +10,8 @@ public class Owner {
     private String address;
     private String phoneNumber;
     private List<Pet> pets;
+    private List<Bill> bills;
+    private boolean isLegalPerson;
 
     public Long getId() {
         return id;
@@ -57,5 +59,21 @@ public class Owner {
 
     public void setPets(List<Pet> pets) {
         this.pets = pets;
+    }
+
+    public List<Bill> getBills() {
+        return bills;
+    }
+
+    public void setBills(List<Bill> bills) {
+        this.bills = bills;
+    }
+
+    public boolean isLegalPerson() {
+        return isLegalPerson;
+    }
+
+    public void setLegalPerson(boolean legalPerson) {
+        isLegalPerson = legalPerson;
     }
 }

@@ -6,7 +6,7 @@ public class Task {
 
     private Long id;
     private String description;
-    private Date dateToDoTask;
+    private Date dateDeadline;
 
     public Long getId() {
         return id;
@@ -24,11 +24,11 @@ public class Task {
         this.description = description;
     }
 
-    public Date getDateToDoTask() {
-        return dateToDoTask;
+    public Date getDateDeadline() {
+        return dateDeadline;
     }
 
-    public void setDateToDoTask(Date dateToDoTask) {
-        this.dateToDoTask = dateToDoTask;
+    public void setDateDeadline(Date dateDeadline) {
+        this.dateDeadline = dateDeadline;
     }
 }

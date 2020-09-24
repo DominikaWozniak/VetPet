@@ -1,13 +1,20 @@
 package pl.vetpet.pojo;
 
 import java.util.Date;
+import java.util.List;
 
 public class Invoice {
 
     private Long id;
+    private LegalPerson legalPerson;
     private Visit visit;
-    private Date invoiceDate;
+    private Date dateOfIssue;
+    private Date paymentDeadline;
     private Accountant accountant;
+    private List<PetTreatmentPrice> petTreatmentPrices;
+    private Float totalGross;
+    private boolean isCash;
+    private boolean isMoneyTransfer;
 
     public Long getId() {
         return id;
@@ -15,6 +22,14 @@ public class Invoice {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public LegalPerson getLegalPerson() {
+        return legalPerson;
+    }
+
+    public void setLegalPerson(LegalPerson legalPerson) {
+        this.legalPerson = legalPerson;
     }
 
     public Visit getVisit() {
@@ -25,12 +40,12 @@ public class Invoice {
         this.visit = visit;
     }
 
-    public Date getInvoiceDate() {
-        return invoiceDate;
+    public Date getDateOfIssue() {
+        return dateOfIssue;
     }
 
-    public void setInvoiceDate(Date invoiceDate) {
-        this.invoiceDate = invoiceDate;
+    public void setDateOfIssue(Date dateOfIssue) {
+        this.dateOfIssue = dateOfIssue;
     }
 
     public Accountant getAccountant() {
@@ -39,5 +54,45 @@ public class Invoice {
 
     public void setAccountant(Accountant accountant) {
         this.accountant = accountant;
+    }
+
+    public Float getTotalGross() {
+        return totalGross;
+    }
+
+    public void setTotalGross(Float totalGross) {
+        this.totalGross = totalGross;
+    }
+
+    public Date getPaymentDeadline() {
+        return paymentDeadline;
+    }
+
+    public void setPaymentDeadline(Date paymentDeadline) {
+        this.paymentDeadline = paymentDeadline;
+    }
+
+    public boolean isCash() {
+        return isCash;
+    }
+
+    public void setCash(boolean cash) {
+        isCash = cash;
+    }
+
+    public boolean isMoneyTransfer() {
+        return isMoneyTransfer;
+    }
+
+    public void setMoneyTransfer(boolean moneyTransfer) {
+        isMoneyTransfer = moneyTransfer;
+    }
+
+    public List<PetTreatmentPrice> getPetTreatmentPrices() {
+        return petTreatmentPrices;
+    }
+
+    public void setPetTreatmentPrices(List<PetTreatmentPrice> petTreatmentPrices) {
+        this.petTreatmentPrices = petTreatmentPrices;
     }
 }
