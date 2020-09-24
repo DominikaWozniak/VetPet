@@ -1,14 +1,17 @@
 package pl.vetpet.pojo;
 
 import java.util.Date;
+import java.util.List;
 
 public class Visit {
 
     private Long id;
     private Date visitDate;
-    private Pet pet;
+    private List<Pet> pets;
+    private OwnerNaturalPerson ownerNaturalPerson;
+    private LegalPerson legalPerson;
     private String description;
-    private Vet vet;
+    private List<Vet> vets;
 
     public Long getId() {
         return id;
@@ -18,12 +21,12 @@ public class Visit {
         this.id = id;
     }
 
-    public Pet getPet() {
-        return pet;
+    public List<Pet> getPets() {
+        return pets;
     }
 
-    public void setPet(Pet pet) {
-        this.pet = pet;
+    public void setPets(List<Pet> pets) {
+        this.pets = pets;
     }
 
     public String getDescription() {
@@ -34,12 +37,12 @@ public class Visit {
         this.description = description;
     }
 
-    public Vet getVet() {
-        return vet;
+    public List<Vet> getVets() {
+        return vets;
     }
 
-    public void setVet(Vet vet) {
-        this.vet = vet;
+    public void setVets(List<Vet> vets) {
+        this.vets = vets;
     }
 
     public Date getVisitDate() {
@@ -48,5 +51,21 @@ public class Visit {
 
     public void setVisitDate(Date visitDate) {
         this.visitDate = visitDate;
+    }
+
+    public OwnerNaturalPerson getOwnerNaturalPerson() {
+        return ownerNaturalPerson;
+    }
+
+    public void setOwnerNaturalPerson(OwnerNaturalPerson ownerNaturalPerson) {
+        this.ownerNaturalPerson = ownerNaturalPerson;
+    }
+
+    public LegalPerson getLegalPerson() {
+        return legalPerson;
+    }
+
+    public void setLegalPerson(LegalPerson legalPerson) {
+        this.legalPerson = legalPerson;
     }
 }

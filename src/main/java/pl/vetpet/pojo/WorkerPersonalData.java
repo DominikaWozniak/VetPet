@@ -5,9 +5,10 @@ public class WorkerPersonalData {
     private Long id;
     private String name;
     private String surname;
-    private String address;
+    private Address address;
     private String personalId;
     private String phoneNumber;
+    private String email;
 
     public Long getId() {
         return id;
@@ -33,11 +34,11 @@ public class WorkerPersonalData {
         this.surname = surname;
     }
 
-    public String getAddress() {
+    public Address getAddress() {
         return address;
     }
 
-    public void setAddress(String address) {
+    public void setAddress(Address address) {
         this.address = address;
     }
 
@@ -55,5 +56,13 @@ public class WorkerPersonalData {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

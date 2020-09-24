@@ -10,7 +10,8 @@ public class Pet {
     private String name;
     private PetType petType;
     private Date birthDate;
-    private Owner owner;
+    private OwnerNaturalPerson ownerNaturalPerson;
+    private LegalPerson legalPerson;
 
     public Long getId() {
         return id;
@@ -44,11 +45,19 @@ public class Pet {
         this.birthDate = birthDate;
     }
 
-    public Owner getOwner() {
-        return owner;
+    public OwnerNaturalPerson getOwnerNaturalPerson() {
+        return ownerNaturalPerson;
     }
 
-    public void setOwner(Owner owner) {
-        this.owner = owner;
+    public void setOwnerNaturalPerson(OwnerNaturalPerson ownerNaturalPerson) {
+        this.ownerNaturalPerson = ownerNaturalPerson;
+    }
+
+    public LegalPerson getLegalPerson() {
+        return legalPerson;
+    }
+
+    public void setLegalPerson(LegalPerson legalPerson) {
+        this.legalPerson = legalPerson;
     }
 }
