@@ -14,27 +14,44 @@ public class UserServiceImpl implements UserService {
     private QueryExecutor queryExecutor;
     private Scanner scanner;
 
-    public UserServiceImpl(){
+    public UserServiceImpl() {
         queryExecutor = new QueryExecutor();
         scanner = new Scanner(System.in);
     }
 
     @Override
-    public void userLogIn(){
-        String userLogin = scanner.nextLine();
-        String userPsw = scanner.nextLine();
-
+    public void userLogIn(UserDetails userDetails) {
         try {
-            ResultSet resultSet = queryExecutor.executeSelect("SELECT * FROM `user_details` WHERE `login`=\"" + userLogin + "\" " +
-                    "AND `password`=\"" + userPsw + "\"");
+            System.out.println("Podaj login:");
+            String userLogin = scanner.nextLine();
+
+            System.out.println("Podaj hasło:");
+            String userPsw = scanner.nextLine();
+
+            ResultSet resultSet = queryExecutor
+                    .executeSelect("SELECT `login`, `password`, `permission` FROM " +
+                            "`user_details` WHERE `login`=\"" + userLogin + "\" " +
+                            "AND `password`=\"" + userPsw + "\"");
+
             resultSet.next();
-            String userName = resultSet.getString("login");
-            String password = resultSet.getString("password");
-            System.out.println(userName + " " + password);
-        } catch (SQLException e)
-        {
-            e.printStackTrace();
+
+            String userLoginSQL = resultSet.getString("login");
+            String userPswSQL = resultSet.getString("password");
+            String userPermissionSQL = resultSet.getString("permission");
+
+            if (userLogin.equals(userLoginSQL) && userPsw.equals(userPswSQL)) {
+                System.out.println("Zalogowano.");
+                userDetails.setPermission(userPermissionSQL);
+            } else {
+                System.out.println("Niepoprawny login lub hasło. Sprawdź wielkość znaków.");
+            }
+
+
+        } catch (SQLException e) {
+            System.out.println("Niepoprawny login lub hasło.");
         }
+
+
     }
 
     @Override
