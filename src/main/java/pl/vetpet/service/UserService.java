@@ -7,7 +7,7 @@ import java.sql.SQLException;
 
 public interface UserService {
 
-    void userLogIn() throws SQLException;
+    void userLogIn(UserDetails userDetails) throws SQLException;
 
     void createNewUser(UserDetails userDetails);
 

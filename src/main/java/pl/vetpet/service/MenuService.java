@@ -1,8 +1,12 @@
 package pl.vetpet.service;
 
+import java.sql.SQLException;
+
 public interface MenuService {
 
-    void mainMenu();
+    void mainMenu() throws SQLException;
+
+    void checkUserPermission();
 
     void adminMenu();
 
